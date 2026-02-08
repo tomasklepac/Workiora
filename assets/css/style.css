@@ -162,14 +162,28 @@ img {
 }
 
 .logo {
-    display: flex;
-    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--color-text-main);
 }
 
-.logo img {
-    height: 40px;
-    /* Adjust based on preference */
+.footer-logo-img {
+    display: inline-block;
+    margin-bottom: var(--space-sm);
+}
+
+.footer-logo-img img {
+    height: 60px;
+    /* Larger in footer */
     width: auto;
+    opacity: 0.8;
+    transition: var(--transition-fast);
+}
+
+.footer-logo-img img:hover {
+    opacity: 1;
 }
 
 #navbar {
