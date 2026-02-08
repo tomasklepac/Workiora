@@ -513,10 +513,7 @@ footer {
     margin-right: var(--space-sm);
 }
 
-.footer-logo-img img {
-    height: 30px;
-    margin-right: var(--space-sm);
-}
+
 
 .footer-left {
     display: flex;
