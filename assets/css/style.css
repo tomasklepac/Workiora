@@ -18,7 +18,7 @@
     --space-xl: 6rem;
 
     /* Typography */
-    --font-heading: 'Outfit', sans-serif;
+    --font-heading: 'Cinzel', serif;
     --font-body: 'Inter', sans-serif;
 
     /* Transitions */
@@ -162,10 +162,14 @@ img {
 }
 
 .logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px;
+    /* Adjust based on preference */
+    width: auto;
 }
 
 #navbar {
@@ -506,6 +510,11 @@ footer {
 .footer-logo {
     font-family: var(--font-heading);
     font-weight: 700;
+    margin-right: var(--space-sm);
+}
+
+.footer-logo-img img {
+    height: 30px;
     margin-right: var(--space-sm);
 }
 
