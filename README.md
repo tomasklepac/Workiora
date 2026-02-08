@@ -1,23 +1,23 @@
 # Workiora
 
-Moderní prezentační web pro personální eventovou agenturu **Workiora**.
-Web slouží k prezentaci služeb (hostesky, stagehands, security) a jako kontaktní bod pro klienty.
+A modern presentation website for the **Workiora** personnel event agency.
+The website serves to showcase services (hostesses, stagehands, security) and acts as a contact point for clients.
 
-## Technologie
+## Technologies
 - HTML5
 - CSS3 (Custom properties, Flexbox/Grid)
 - Vanilla JavaScript
-- Žádné externí frameworky (čistý kód)
+- No external frameworks (clean code)
 
-## Funkce
-- Responzivní design (Mobile-first)
-- Dark mode tema
+## Features
+- Responsive design (Mobile-first)
+- Dark mode theme
 - Smooth scrolling
-- Interaktivní prvky (hover effekty, mobilní menu)
+- Interactive elements (hover effects, mobile menu)
 
-## Spuštění
-Stačí otevřít soubor `index.html` v prohlížeči.
+## How to Run
+Simply open the `index.html` file in your browser.
 
 ---
-Vytvořil [Tomáš Klepač](https://tomasklepac.cz)
+Created by [Tomáš Klepač](https://tomasklepac.cz)
 Workiora © 2026
