@@ -826,10 +826,10 @@ footer {
     }
 
     .service-card {
-        flex: 0 0 85%;
-        /* Vidím 1 celý a kousek z dalšího na boku */
+        flex: 0 0 75%;
+        /* Karta je užší, lépe se vejde na displej */
         scroll-snap-align: center;
-        max-width: 85%;
+        max-width: 75%;
     }
 
     /* Swipe Nápověda animace */
