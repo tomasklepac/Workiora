@@ -1,0 +1,40 @@
+/* Ticker Section */
+.ticker-section {
+    position: relative;
+    padding: var(--space-md) 0;
+    overflow: hidden;
+    background: var(--color-primary);
+    color: var(--color-bg);
+}
+
+.ticker-wrap {
+    width: 100%;
+    overflow: hidden;
+    padding-left: 100%;
+    /* Off-screen start */
+}
+
+.ticker {
+    display: flex;
+    white-space: nowrap;
+    animation: ticker 25s linear infinite;
+    gap: var(--space-lg);
+}
+
+.ticker__item {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    flex-shrink: 0;
+}
+
+@keyframes ticker {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
