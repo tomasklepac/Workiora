@@ -45,6 +45,8 @@
 
     <main>
         <section id="hero">
+            <!-- Převedeno pozadí ze sekce na vnitřní div pro css animaci Ken Burns efektu -->
+            <div class="hero-bg"></div>
             <div class="hero-overlay"></div>
             <div class="container hero-content">
                 <h1 class="fade-in delay-200">PERSONÁLNÍ EVENTOVÁ AGENTURA</h1>
@@ -68,11 +70,51 @@
                             <strong>Kvalitní, spolehlivý a reprezentativní personál</strong>, který se stane tváří vaší
                             akce.
                         </p>
-                        <ul class="features-list">
-                            <li><strong>SPECIALIZACE:</strong> Soustředíme se výhradně na personál.</li>
-                            <li><strong>ZKUŠENOSTI:</strong> Působíme na trhu již od roku 2020.</li>
-                            <li><strong>FLEXIBILITA:</strong> Dodáváme týmy od jednotlivců po desítky lidí.</li>
-                        </ul>
+                        <div class="features-grid">
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                        </polygon>
+                                    </svg>
+                                </div>
+                                <div class="feature-content">
+                                    <strong>SPECIALIZACE</strong>
+                                    <span>Soustředíme se výhradně na personál.</span>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="feature-content">
+                                    <strong>ZKUŠENOSTI</strong>
+                                    <span>Působíme na trhu již od roku 2020.</span>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <polyline points="12 6 12 12 16 14"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="feature-content">
+                                    <strong>FLEXIBILITA</strong>
+                                    <span>Dodáváme týmy od jednotlivců po desítky lidí.</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -112,37 +154,51 @@
                     <h2>NAŠE SLUŽBY</h2>
                     <p class="subtitle">KOMPLEXNÍ PERSONÁLNÍ POKRYTÍ</p>
                 </div>
-                <div class="services-grid">
-                    <article class="service-card">
-                        <div class="card-image"
-                            style="background-image: url('assets/img/hostes.png'); background-size: cover; background-position: center;">
-                        </div>
-                        <div class="card-content">
-                            <h3>HOSTESKY</h3>
-                            <p>Reprezentativní personál pro konference, veletrhy a VIP akce. Profesionální vystupování a
-                                jazyková vybavenost.</p>
-                        </div>
-                    </article>
-                    <article class="service-card">
-                        <div class="card-image"
-                            style="background-image: url('assets/img/stagehands.png'); background-size: cover; background-position: center;">
-                        </div>
-                        <div class="card-content">
-                            <h3>STAGEHANDS</h3>
-                            <p>Fyzicky zdatný personál pro stavby a demontáže pódií, manipulaci s technikou a support
-                                pro produkci.</p>
-                        </div>
-                    </article>
-                    <article class="service-card">
-                        <div class="card-image"
-                            style="background-image: url('assets/img/security.png'); background-size: cover; background-position: center;">
-                        </div>
-                        <div class="card-content">
-                            <h3>SECURITY</h3>
-                            <p>Zkušení pracovníci ostrahy pro zajištění bezpečnosti během akcí, kontrolu vstupů a VIP
-                                zón.</p>
-                        </div>
-                    </article>
+                <div class="services-carousel-wrapper">
+                    <div class="services-grid">
+                        <article class="service-card">
+                            <div class="card-image"
+                                style="background-image: url('assets/img/hostes.png'); background-size: cover; background-position: center;">
+                            </div>
+                            <div class="card-content">
+                                <h3>HOSTESKY</h3>
+                                <p>Reprezentativní personál pro konference, veletrhy a VIP akce. Profesionální
+                                    vystupování a
+                                    jazyková vybavenost.</p>
+                            </div>
+                        </article>
+                        <article class="service-card">
+                            <div class="card-image"
+                                style="background-image: url('assets/img/stagehands.png'); background-size: cover; background-position: center;">
+                            </div>
+                            <div class="card-content">
+                                <h3>STAGEHANDS</h3>
+                                <p>Fyzicky zdatný personál pro stavby a demontáže pódií, manipulaci s technikou a
+                                    support
+                                    pro produkci.</p>
+                            </div>
+                        </article>
+                        <article class="service-card">
+                            <div class="card-image"
+                                style="background-image: url('assets/img/security.png'); background-size: cover; background-position: center;">
+                            </div>
+                            <div class="card-content">
+                                <h3>SECURITY</h3>
+                                <p>Zkušení pracovníci ostrahy pro zajištění bezpečnosti během akcí, kontrolu vstupů a
+                                    VIP
+                                    zón.</p>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- Indikátor swajpování na mobech -->
+                    <div class="swipe-indicator">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="11 17 6 12 11 7"></polyline>
+                            <polyline points="18 17 13 12 18 7"></polyline>
+                        </svg>
+                        <span>Posuňte prstem pro další služby</span>
+                    </div>
                 </div>
             </div>
         </section>
@@ -292,6 +348,15 @@
         </div>
         <button id="lightbox-next" class="lightbox-nav lightbox-next" aria-label="Další obrázek">&#10095;</button>
     </div>
+    <!-- Plovoucí CTA tlačítko pro mobily -->
+    <a href="#contact" class="floating-cta" aria-label="Kontaktovat agneturu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+        </svg>
+        <span>Mám zájem</span>
+    </a>
 </body>
 
 </html>

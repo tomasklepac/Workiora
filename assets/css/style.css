@@ -263,10 +263,30 @@ img {
     justify-content: center;
     position: relative;
     background-color: #111;
+    overflow: hidden;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-image: url('../img/gallery_12.jpg');
-    /* Placeholder, adjust to best image */
     background-size: cover;
     background-position: center;
+    animation: kenBurns 20s infinite alternate ease-in-out;
+    z-index: 0;
+}
+
+@keyframes kenBurns {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.1);
+    }
 }
 
 .hero-overlay {
@@ -374,34 +394,50 @@ section {
     color: var(--color-text-main);
 }
 
-.features-list {
+/* Features s Ikonami */
+.features-grid {
     display: grid;
+    gap: var(--space-md);
+    margin-top: var(--space-md);
+}
+
+.feature-item {
+    display: flex;
+    align-items: flex-start;
     gap: var(--space-sm);
-    margin-bottom: var(--space-md);
+    background: rgba(255, 255, 255, 0.03);
+    padding: var(--space-sm);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.feature-icon {
+    color: var(--color-primary);
+    flex-shrink: 0;
+    background: rgba(255, 215, 0, 0.1);
+    padding: 10px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feature-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.feature-content strong {
     font-family: var(--font-heading);
-    /* Switch list to heading font */
+    color: var(--color-text-main);
     font-size: 1.1rem;
+    letter-spacing: 1px;
+    margin-bottom: 2px;
 }
 
-.features-list li {
-    padding-left: 20px;
-    position: relative;
+.feature-content span {
     color: var(--color-text-muted);
-}
-
-.features-list li strong {
-    color: var(--color-primary);
-    margin-right: 5px;
-}
-
-.features-list li::before {
-    content: "///";
-    color: var(--color-primary);
-    position: absolute;
-    left: 0;
-    font-weight: bold;
-    font-size: 0.8rem;
-    letter-spacing: -1px;
+    font-size: 0.95rem;
 }
 
 
@@ -448,6 +484,15 @@ section {
 .card-content p {
     color: var(--color-text-muted);
     font-size: 1rem;
+}
+
+/* Base styles for Swipe indicator & Floating CTA (hidden on Desktop) */
+.swipe-indicator {
+    display: none;
+}
+
+.floating-cta {
+    display: none;
 }
 
 /* Gallery */
@@ -754,6 +799,89 @@ footer {
 
     .footer-col h3 {
         font-size: 1.1rem;
+    }
+
+    /* Mobilní Karusel Služeb */
+    .services-carousel-wrapper {
+        margin: 0 calc(-1 * var(--space-md));
+        /* Roztažení přes okraje telefonu */
+        padding: 0 var(--space-md) var(--space-md) var(--space-md);
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        /* Hladké zastavení na kartách */
+        scrollbar-width: none;
+        /* Hide scrollbar Firefox */
+    }
+
+    .services-carousel-wrapper::-webkit-scrollbar {
+        display: none;
+        /* Hide scrollbar Chrome/Safari */
+    }
+
+    .services-grid {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: var(--space-sm);
+        min-width: min-content;
+    }
+
+    .service-card {
+        flex: 0 0 85%;
+        /* Vidím 1 celý a kousek z dalšího na boku */
+        scroll-snap-align: center;
+        max-width: 85%;
+    }
+
+    /* Swipe Nápověda animace */
+    .swipe-indicator {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        color: var(--color-text-muted);
+        font-size: 0.8rem;
+        margin-top: 5px;
+        animation: pulseText 2s infinite ease-in-out;
+    }
+
+    @keyframes pulseText {
+
+        0%,
+        100% {
+            opacity: 0.5;
+            transform: translateX(0);
+        }
+
+        50% {
+            opacity: 1;
+            transform: translateX(5px);
+        }
+    }
+
+    /* Plovoucí Tlačítko (Mobil jen) */
+    .floating-cta {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: var(--color-primary);
+        color: var(--color-bg);
+        padding: 12px 20px;
+        border-radius: 50px;
+        font-family: var(--font-heading);
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 0.9rem;
+        box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
+        z-index: 999;
+        transition: transform 0.2s ease;
+    }
+
+    .floating-cta:active {
+        transform: scale(0.95);
     }
 }
 
