@@ -661,13 +661,40 @@ footer {
 
 /* Mobile Responsive */
 @media (max-width: 768px) {
+    html {
+        font-size: 14px;
+        /* Makes all REM units smaller on mobile */
+    }
+
     :root {
-        --space-lg: 3rem;
-        --space-xl: 4rem;
+        --space-sm: 0.8rem;
+        --space-md: 1.5rem;
+        --space-lg: 2.5rem;
+        --space-xl: 3.5rem;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+        letter-spacing: 1px;
+    }
+
+    .section-header h2 {
+        font-size: 2.2rem;
+    }
+
+    .section-header .subtitle {
+        font-size: 0.85rem;
     }
 
     .hero-content h1 {
         font-size: 3rem;
+        margin-bottom: var(--space-xs);
+    }
+
+    .hero-content p {
+        font-size: 0.9rem;
+        letter-spacing: 2px;
     }
 
     #mobile-toggle {
@@ -689,7 +716,7 @@ footer {
         transition: transform var(--transition-smooth);
         border-top: none;
         z-index: 1000;
-        gap: 2rem;
+        gap: 1.5rem;
     }
 
     #navbar.open {
@@ -697,7 +724,7 @@ footer {
     }
 
     .nav-link {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 
     .contact-wrapper {
@@ -705,8 +732,28 @@ footer {
         padding: var(--space-md);
     }
 
+    .contact-info h2 {
+        font-size: 2rem;
+    }
+
     .about-grid {
         padding: var(--space-md);
+    }
+
+    .services-grid {
+        gap: var(--space-sm);
+    }
+
+    .gallery-item {
+        height: 200px;
+    }
+
+    .footer-grid {
+        gap: var(--space-md);
+    }
+
+    .footer-col h3 {
+        font-size: 1.1rem;
     }
 }
 
