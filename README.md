@@ -19,5 +19,5 @@ The website serves to showcase services (hostesses, stagehands, security) and ac
 Simply open the `index.html` file in your browser.
 
 ---
-Created by [Tomáš Klepač](https://tomasklepac.cz)
+Created by [Tomáš Klepač](https://tomasklepac.cz) & Lukáš Gremlica
 Workiora © 2026
